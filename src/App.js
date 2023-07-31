@@ -1,11 +1,10 @@
-import './components/HeaderCartButton.module.css';
-import './components/MainHeader.css'
+import React, { Fragment } from "react";
+import MainHeader from "./components/layout/MainHeader";
 function App() {
   return (
-    <div className="header">
-      <h2>ReactMeals</h2>
-      <button className="button">Your Cart:0</button>
-    </div>
+    <Fragment>
+      <MainHeader/>
+    </Fragment>
   );
 }
 
