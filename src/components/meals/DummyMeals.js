@@ -1,25 +1,26 @@
-import React from "react";
-import classes from './AvailabelMeals.module.css';
-import Card from '../UI/Card'
-const DummyMeals=(props)=>{
-    return (
-        <Card>
-            <div className={classes.meals}>
-            <ul className={classes.ul}>
-             {props.items.map((item)=>(
-                <li>
-                    <div>{item.title}</div>
-                    <div>{item.description}</div>
-                    <div>{item.price}</div>
-                    
-                  </li>  
-                ))}
-        </ul>
-        </div>
-        </Card>
-        
-        
-       
-    )
-}
-export default DummyMeals;
+const DUMMY_MEALS = [
+    {
+      id: 'm1',
+      title: 'Sushi',
+      description: 'Finest fish and veggies',
+      price: 22.99,
+    },
+    {
+      id: 'm2',
+      title: 'Schnitzel',
+      description: 'A german specialty!',
+      price: 16.5,
+    },
+    {
+      id: 'm3',
+      title: 'Barbecue Burger',
+      description: 'American, raw, meaty',
+      price: 12.99,
+    },
+    {
+      id: 'm4',
+      title: 'Green Bowl',
+      description: 'Healthy...and green...',
+      price: 18.99,
+    },
+  ];
