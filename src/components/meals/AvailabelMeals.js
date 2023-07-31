@@ -30,8 +30,9 @@ const DUMMY_MEALS=[
 
 ]
 const AvailabelMeals =(props)=>{
-    const mealsList=DUMMY_MEALS.map((meal)=>(<li>
+    const mealsList=DUMMY_MEALS.map((meal)=>(<li >
         <MealItem
+        key={meal.id}
         title={meal.title}
         description={meal.description}
         price={meal.price}
