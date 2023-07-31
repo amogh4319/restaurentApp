@@ -1,6 +1,7 @@
 import React from "react";
 import classes from './AvailabelMeals.module.css';
 import MealItem from "./Meal Item/MealItem";
+import Card from "../UI/Card";
 const DUMMY_MEALS=[
     {
         id:'m1',
@@ -38,7 +39,10 @@ const AvailabelMeals =(props)=>{
     </li>))
     return (
         <section className={classes.meals}>
+            <Card>
             <ul className={classes.ul}>{mealsList}</ul>
+            </Card>
+            
         </section>
     )
 }
