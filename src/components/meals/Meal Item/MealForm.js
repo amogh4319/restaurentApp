@@ -1,10 +1,21 @@
-import React from "react";
+import React,{useContext} from "react";
 import classes from './MealForm.module.css';
 import Input from "../../UI/Input";
+import CartContext from "../../../store/cart-context";
 const MealForm =(props)=>{
+    const ctx=useContext(CartContext);
+    
+    const addItemToCart=(event)=>{
+        event.preventDefault();
+        const quantity=document.getElementById("amount"+props.id).value;
+        ctx.addItem({...props.item,quantity:quantity});
+        // console.log('after addItemToCart',ctx)
+
+    }
     return (
-        
+       
         <form className={classes.form}>
+            {/* {console.log('after rendering',ctx.items)} */}
             <Input 
                 label="Amount"
                 input={{
@@ -19,7 +30,7 @@ const MealForm =(props)=>{
                 
             
             />
-            <div className={classes.button}><button>+Add</button></div>
+            <div className={classes.button} onClick={addItemToCart}><button>+Add</button></div>
         </form>
         
         
